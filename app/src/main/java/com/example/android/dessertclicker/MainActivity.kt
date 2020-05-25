@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.example.android.dessertclicker.databinding.ActivityMainBinding
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,8 +66,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Verificar se deve ser apagado
-        Log.i("MainActivity", "onCreate Called")
+        Timber.i("onCreate Called")
 
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -150,45 +150,39 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    // TODO: Talvez apagar o override do onStart
     override fun onStart() {
         super.onStart()
 
-        Log.i("MainActivity", "onStart Called")
+        Timber.i("onStart Called")
     }
 
-    // TODO: Talvez apagar o override do onRestart
     override fun onRestart() {
         super.onRestart()
 
-        Log.i("MainActivity", "onRestart Called")
+        Timber.i("onRestart Called")
     }
 
-    // TODO: Talvez apagar o override do onResume
-    override fun onResume()  {
+    override fun onResume() {
         super.onResume()
 
-        Log.i("MainActivity", "onResume Called")
+        Timber.i("onResume Called")
     }
 
-    // TODO: Talvez apagar o override do onPause
-    override fun onPause()  {
+    override fun onPause() {
         super.onPause()
 
-        Log.i("MainActivity", "onPause Called")
+        Timber.i("onPause Called")
     }
 
-    // TODO: Talvez apagar o override do onStop
-    override fun onStop()  {
+    override fun onStop() {
         super.onStop()
 
-        Log.i("MainActivity", "onStop Called")
+        Timber.i("onStop Called")
     }
 
-    // TODO: Talvez apagar o override do onDestroy
-    override fun onDestroy()  {
+    override fun onDestroy() {
         super.onDestroy()
 
-        Log.i("MainActivity", "onDestroy Called")
+        Timber.i("onDestroy Called")
     }
 }
